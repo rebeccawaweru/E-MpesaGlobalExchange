@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.bg{
+  background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5) ),url('./assets/images/bg.jpg') !important;
+  background-position:"left";
+  background-repeat: "no-repeat";
+  overflow:"hidden" !important;
+  background-size: "cover" !important;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  color: white;
+}
+
+.marquee-wrapper{
+  background:#2F394C;
+  text-align:left;
+
+}
+.marquee-wrapper .container{
+  overflow:hidden;
+
+  text-align:left;
+
+}
+.marquee-inner span{
+  height:50%;
+  padding-left: -100px !important;
+}
+.marquee-wrapper .marquee-block{
+  width: 400px;
+  height: 1500px;
+  overflow: hidden;
+
+  position: relative;
+
+  background:white;
+
+  float:left;
+}
+.marquee-inner{
+  display: block;
+  height: 200%;
+  width:400px;
+  position: absolute;
+
+}
+
+.marquee-inner.to-left{
+  animation: marqueeTop 25s linear infinite !important;
+}
+.marquee-inner.to-right{
+  animation: marqueeBottom 25s linear infinite !important;
+}
+.marquee-item{
+  width: 230px;
+  height: 65px;
+  display: block;
+  margin:10px;
+  transition: all .2s ease-out;
+  background:white;
+}
+@keyframes marqueeTop{
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@keyframes marqueeBottom{
+  0% { 
+    top: -100%; 
+  }
+  100% {
+   top: 0; 
+  }
+}
